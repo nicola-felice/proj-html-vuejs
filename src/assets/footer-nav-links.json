@@ -1,0 +1,50 @@
+{
+  "explore": {
+    "links": [
+      {
+        "name": "Start here",
+        "url": "#"
+      },
+      {
+        "name": "Success story",
+        "url": "#"
+      },
+      {
+        "name": "Blog",
+        "url": "#"
+      },
+      {
+        "name": "Courses",
+        "url": "#"
+      },
+      {
+        "name": "About us",
+        "url": "#"
+      },
+      {
+        "name": "Contact us",
+        "url": "#"
+      }
+    ]
+  },
+  "information": {
+    "links": [
+      {
+        "name": "Membership",
+        "url": "#"
+      },
+      {
+        "name": "Purchase guide",
+        "url": "#"
+      },
+      {
+        "name": "Privacy policy",
+        "url": "#"
+      },
+      {
+        "name": "Terms of services",
+        "url": "#"
+      }
+    ]
+  }
+}

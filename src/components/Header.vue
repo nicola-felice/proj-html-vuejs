@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/vars.scss';
+
 header { 
   box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.2);
   position: relative;
@@ -65,7 +67,7 @@ nav ul {
   li {
     margin-right: 2rem;
     font-weight: 500;
-    font-size: .9rem;
+    font-size: .95rem;
     text-transform: capitalize;
     padding: 2rem 0;  
     .arrow_down {
@@ -75,7 +77,7 @@ nav ul {
     }
     // on hover dropdown menu
     &:hover {
-      color: #20ad96;
+      color: $main-dark-green;
       .dropdown_menu {
         display: block;
       }
@@ -91,7 +93,7 @@ nav ul {
       background-color: white;
       padding: 1.5rem;
       .link {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         color: grey;
         a {
           display: block;
@@ -112,7 +114,7 @@ nav ul {
     overflow: hidden;
   .icon {
     padding: .15rem;
-    top: 63%;
+    top: 64%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.4rem;
@@ -124,20 +126,23 @@ nav ul {
   margin-left: 1.25rem;
   position: relative;
   input {
-    padding: .75rem 1rem;
-    background-color: #f6f3f5;
+    padding: .8rem 1.5rem;
+    padding-right: 3rem;
+    font-size: 1rem;
+    width: 17rem;
+    background-color: $main-light-grey;
     border: none;
     border-radius: .25rem;
     &:focus {
-      outline: 2px solid #20ad96;
+      outline: 2px solid $main-dark-green;
     }
   }
   .icon {
     position: absolute;
-    right: 1rem;
+    right: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    color: #20ad96;
+    color: $main-dark-green;
   }
 }
 </style>
