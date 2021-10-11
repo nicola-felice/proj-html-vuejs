@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :links="navLinks" />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import Header from './components/Header.vue';
+import navLinksJSon from './assets/nav-links.json';
 
 export default {
   name: 'App',
   components: {
     Header,
+  },
+  data() {
+    return {
+      navLinks: navLinksJSon,
+    }
   }
 }
 </script>

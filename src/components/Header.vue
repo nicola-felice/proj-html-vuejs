@@ -7,35 +7,17 @@
 
       <nav class="navigation">
         <ul>
-          <li>
-            <a href="#">home</a>
+          <li v-for="(elm, index) in links" :key="index">
+            <a :href="elm.categoryPageLink">{{elm.categoryName}}</a>
             <font-awesome-icon class="arrow_down" icon="chevron-down" />
-            <!-- HERE menu dropdown -->
-          </li>
-          <li>
-            <a href="#">home</a>
-            <font-awesome-icon class="arrow_down" icon="chevron-down" />
-            <!-- HERE menu dropdown -->
-          </li>
-          <li>
-            <a href="#">home</a>
-            <font-awesome-icon class="arrow_down" icon="chevron-down" />
-            <!-- HERE menu dropdown -->
-          </li>
-          <li>
-            <a href="#">home</a>
-            <font-awesome-icon class="arrow_down" icon="chevron-down" />
-            <!-- HERE menu dropdown -->
-          </li>
-          <li>
-            <a href="#">home</a>
-            <font-awesome-icon class="arrow_down" icon="chevron-down" />
-            <!-- HERE menu dropdown -->
-          </li>
-          <li>
-            <a href="#">home</a>
-            <font-awesome-icon class="arrow_down" icon="chevron-down" />
-            <!-- HERE menu dropdown -->
+            <!-- dropdown menu (on hover) -->
+            <div class="dropdown_menu">
+              <div v-for="(link, id) in elm.links" :key="id" class="link">
+                <a :href="link.url">
+                  {{link.name}}
+                </a>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
@@ -57,16 +39,18 @@
 <script>
 export default {
   name: 'Header',
+  props: ['links']
 }
 </script>
 
 <style lang="scss" scoped>
 header { 
   box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 99999;
   .container {
     display: flex;
     align-items: center;  
-    padding: 1.25rem 0;  
   }
 }
 
@@ -81,11 +65,41 @@ nav ul {
   li {
     margin-right: 2rem;
     font-weight: 500;
+    font-size: .9rem;
     text-transform: capitalize;
+    padding: 2rem 0;  
     .arrow_down {
       margin-left: .25rem;
       font-size: .6rem;
       vertical-align: baseline;
+    }
+    // on hover dropdown menu
+    &:hover {
+      color: #20ad96;
+      .dropdown_menu {
+        display: block;
+      }
+    }
+    .dropdown_menu {
+      display: none;
+      position: absolute;
+      box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.15);
+      top: 100%;
+      min-width: 17rem;
+      z-index: 2;
+      transform: translateX(-5%);
+      background-color: white;
+      padding: 1.5rem;
+      .link {
+        margin-bottom: 1rem;
+        color: grey;
+        a {
+          display: block;
+        }
+        &:hover {
+          color: black;
+        }
+      }
     }
   }
 }
