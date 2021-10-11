@@ -88,8 +88,9 @@ li {
   padding: .7rem 0;
   font-size: .95rem;
   font-weight: 500;
-  color: rgb(110, 110, 110);
+  color: #7a7a7a;
   text-transform: capitalize;
+  font-weight: 600;
   a:hover {
     color: $main-dark-green;
   }

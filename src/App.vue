@@ -2,7 +2,7 @@
   <div id="app">
     <Header :links="navLinksHeader" />
 
-    <main></main>
+    <Main/>
 
     <Footer :links="navLinksFooter" />
   </div>
@@ -12,6 +12,7 @@
 // components
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
+import Main from './components/Main.vue';
 // data
 import navLinksHeaderjson from './assets/header-nav-links.json';
 import navLinksFooterjson from './assets/footer-nav-links.json';
@@ -21,6 +22,7 @@ export default {
   components: {
     Header,
     Footer,
+    Main
   },
   data() {
     return {
@@ -34,7 +36,4 @@ export default {
 <style lang="scss">
 @import './assets/common.scss';
 
-main {
-  height: 70vh;
-}
 </style>
