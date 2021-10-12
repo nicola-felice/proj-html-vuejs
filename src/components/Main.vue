@@ -90,9 +90,9 @@ export default {
       }
       .shape_4 {
         border-radius: 50%;
-        border: 7px solid $main-pink;
-        width: 50px;
-        height: 50px;
+        border: 8px solid $main-pink;
+        width: 60px;
+        height: 60px;
 
         left: -8%;
         bottom: 15%;
@@ -127,8 +127,12 @@ export default {
         padding: 1rem 2rem;
         cursor: pointer;
         font-weight: 800;
+        transition: background-color 250ms ease-in-out;
         .icon {
           margin-right: .5rem;
+        }
+        &:hover {
+          background-color: $main-text-purple;
         }
       }
       .free_sample {
@@ -148,9 +152,9 @@ export default {
         opacity: .5;
         padding: 0 1.75rem;
         transition: opacity 250ms ease-in-out;
-      }
-      img:hover {
-        opacity: 1;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
