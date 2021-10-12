@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container">
-      <p>Maxcoach available courses</p>
+      <p class="subtitle">Maxcoach available courses</p>
       <h2>Access <em>Smart Tutoring</em> Program For Benefits.</h2>
       <div class="benefits_wrapper">
         <div class="benefit_card">
@@ -15,7 +15,7 @@
         </div>
         <div class="benefit_card">
           <img src="../../assets/img/smart_tutoring/about-us-02-image-box-02.png" alt="">
-          <h3>Customize Preferences</h3>
+          <h3>Cloud Storage</h3>
           <p>You can store online lessons via online cloud or download to your device and revise lessons on the way. </p>
           <a href="#">
             Get Free Quote
@@ -24,10 +24,25 @@
         </div>
         <div class="benefit_card">
           <img src="../../assets/img/smart_tutoring/home-2-image-box-03.png" alt="">
-          <h3>Customize Preferences</h3>
+          <h3>Multimedia Channels</h3>
           <p>We provide study materials with various formats: video, audio, slides, doc, prints, books and applications. </p>
           <a href="#">
             Start now
+            <font-awesome-icon icon="long-arrow-alt-right" />
+          </a>
+        </div>
+      </div>
+      <div class="video_companionship_wrapper">
+        <div class="video_container">
+          <img src="../../assets/img/smart_tutoring/home-2-popup-video-poster.jpg" alt="">
+          <img src="../../assets/img/smart_tutoring/icon-youtube-play.png" alt="">
+        </div>
+        <div class="text_container">
+          <p class="subtitle">Get started <span>effortlessly</span></p>
+          <h2>Enjoy Our <em>Companionship</em></h2>
+          <p>Sneek peek into what has in store for you on our online teaching and mentoring portal. Seek for some hidden hints of early-bird rewards as well.</p>
+          <a href="#">
+            Download free guidebook
             <font-awesome-icon icon="long-arrow-alt-right" />
           </a>
         </div>
@@ -50,21 +65,15 @@ section {
   text-align: center;
 }
 
-p {
-  margin-bottom: 1rem;
-  color: $text-gray;
-  text-transform: uppercase;
-  font-weight: 500;
-}
 h2 {
   margin-bottom: 3rem;
   color: $main-text-purple;
   font-size: 1.75rem;
-  em {
-    color: $main-dark-green;
-    font-weight: 500;
-    font-style: normal;
-  }
+}
+em {
+  color: $main-dark-green;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .benefits_wrapper {

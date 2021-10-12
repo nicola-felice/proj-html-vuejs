@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container">
-      <p>Stimulated to learn?</p>
+      <p class="subtitle">Stimulated to learn?</p>
       <h2>Featured Online Courses</h2>
       <div class="courses_wrapper">
         <ul>
@@ -56,9 +56,6 @@ section {
   padding: 5rem 0;
 }
 
-p {
-  margin-bottom: 1rem;
-}
 h2 {
   margin-bottom: 3rem;
   color: $main-text-purple;

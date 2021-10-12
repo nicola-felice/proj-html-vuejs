@@ -35,6 +35,13 @@ img {
   width: 100%;
 }
 
+.subtitle {
+  margin-bottom: 1rem;
+  color: $text-gray;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 /* buttons */
 .btn {
   background-color: $main-dark-green;

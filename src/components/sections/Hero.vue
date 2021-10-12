@@ -20,11 +20,11 @@
         <div class="img_wrapper">
           <img class="portrait" src="../../assets/img/hero/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" alt="">
           <!-- patterns -->
-          <img class="pattern shape_1" src="../../assets/img/hero/maxcoach-shape-02.png" alt="">
-          <img class="pattern shape_2" src="../../assets/img/hero/maxcoach-shape-07.png" alt="">
+          <img class="pattern shape_1" src="../../assets/img/shapes/maxcoach-shape-02.png" alt="">
+          <img class="pattern shape_2" src="../../assets/img/shapes/maxcoach-shape-07.png" alt="">
           <div class="shape_3 pattern">
-            <img src="../../assets/img/hero/maxcoach-shape-08.png" alt="">
-            <img src="../../assets/img/hero/maxcoach-shape-08.png" alt="">            
+            <img src="../../assets/img/shapes/maxcoach-shape-08.png" alt="">
+            <img src="../../assets/img/shapes/maxcoach-shape-08.png" alt="">            
           </div>
           <div class="pattern shape_4"></div>
         </div>
