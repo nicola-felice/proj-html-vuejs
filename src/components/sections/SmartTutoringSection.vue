@@ -34,8 +34,10 @@
       </div>
       <div class="video_companionship_wrapper">
         <div class="video_container">
-          <img id="video_thumbnail" src="../../assets/img/smart_tutoring/home-2-popup-video-poster.jpg" alt="">
-          <img id="yt_play" src="../../assets/img/smart_tutoring/icon-youtube-play.png" alt="">
+          <div class="video_thumbnail_wrapper">
+            <img id="video_thumbnail" src="../../assets/img/smart_tutoring/home-2-popup-video-poster.jpg" alt="">
+            <img id="yt_play" src="../../assets/img/smart_tutoring/icon-youtube-play.png" alt="">
+          </div>
           <!-- shapes -->
           <img class="pattern shape_1" src="../../assets/img/shapes/maxcoach-shape-05-150x150.png" alt="">
           <img class="pattern shape_2" src="../../assets/img/shapes/maxcoach-shape-07.png" alt="">
@@ -129,17 +131,23 @@ p {
     width: 60%;
     padding: 2rem;
     position: relative;
-    #video_thumbnail {
-      border-radius: .5rem;
+    .video_thumbnail_wrapper {
+      overflow: hidden;
+      border-radius: .5rem;    
       cursor: pointer;
-    }
-    #yt_play {
-      width: 90px;
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      #yt_play {
+        width: 90px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #video_thumbnail {
+        transition: scale 600ms ease-in-out;
+      }
+      &:hover #video_thumbnail {
+        scale: 1.1;
+      }
     }
     .pattern {
       position: absolute;
