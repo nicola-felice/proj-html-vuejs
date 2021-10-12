@@ -15,6 +15,10 @@ input {
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  background-color: $main-light-grey;
+}
+
 li {
   list-style: none;
 }

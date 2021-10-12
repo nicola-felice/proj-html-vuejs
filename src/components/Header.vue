@@ -50,6 +50,7 @@ header {
   box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.2);
   position: relative;
   z-index: 99999;
+  background-color: white;
   .container {
     display: flex;
     align-items: center;  

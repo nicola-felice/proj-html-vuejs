@@ -51,7 +51,8 @@ export default {
 @import '../../assets/vars.scss';
 
 #hero {
-  margin: 3rem 0;
+  padding: 3rem 0;
+  background-color: white;
   .container {
     display: flex;
     flex-wrap: wrap;

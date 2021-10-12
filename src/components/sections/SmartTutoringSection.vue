@@ -72,6 +72,8 @@ export default {
 section {
   padding: 5rem 0;
   text-align: center;
+  background-color: white;
+  clip-path: ellipse(140% 100% at 16.08% 0%);
 }
 
 h2 {
@@ -127,6 +129,7 @@ p {
   display: flex;
   text-align: left;
   padding-top: 6rem;
+  padding-bottom: 5rem;
   .video_container {
     width: 60%;
     padding: 2rem;

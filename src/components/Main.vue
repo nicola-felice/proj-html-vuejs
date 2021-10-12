@@ -6,7 +6,7 @@
 
     <Smart-tutoring-section />
 
-    <div style="height: 50vh;" id="spacing"></div>
+    <div style="height: 50vh; background-color: white;" id="spacing"></div>
   </main>
 </template>
 
