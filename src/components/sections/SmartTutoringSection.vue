@@ -34,8 +34,15 @@
       </div>
       <div class="video_companionship_wrapper">
         <div class="video_container">
-          <img src="../../assets/img/smart_tutoring/home-2-popup-video-poster.jpg" alt="">
-          <img src="../../assets/img/smart_tutoring/icon-youtube-play.png" alt="">
+          <img id="video_thumbnail" src="../../assets/img/smart_tutoring/home-2-popup-video-poster.jpg" alt="">
+          <img id="yt_play" src="../../assets/img/smart_tutoring/icon-youtube-play.png" alt="">
+          <!-- shapes -->
+          <img class="pattern shape_1" src="../../assets/img/shapes/maxcoach-shape-05-150x150.png" alt="">
+          <img class="pattern shape_2" src="../../assets/img/shapes/maxcoach-shape-07.png" alt="">
+          <div class="pattern shape_3"></div>
+          <svg class="pattern shape_4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200px" height="202px" viewBox="0 0 200 202">
+            <path d="M139.374493,198.087515 C155.702187,206.99353 190.724846,197.001323 197.677982,159.049528 C204.827153,120.027728 184.496324,118.997566 188.045232,104.801934 C202.287755,83.6528313 204.827153,56.662651 190.073179,40.4146034 C153.570125,2.39058926 144.444362,48.0194062 114.025151,20.1351292 C101.727304,7.83728238 83.0989526,-6.73517414 56.2286492,3.40456297 C18.2385839,17.7404371 27.3303985,47.659333 27.3303985,69.3128542 C27.3303985,76.9370868 3.11408002,91.2696589 0.460095291,110.885776 C-2.88628833,135.619549 12.6277797,168.175291 27.3303985,179.329002 C50.6517938,205.692318 86.6478605,199.608476 102.87144,190.482713 C116.802125,182.646702 128.220783,192.003673 139.374493,198.087515 Z"></path>
+          </svg>
         </div>
         <div class="text_container">
           <p class="subtitle">Get started <span>effortlessly</span></p>
@@ -75,6 +82,13 @@ em {
   font-weight: 500;
   font-style: normal;
 }
+p {
+  text-transform: none;
+  color: $text-dark-gray;
+  font-size: .95rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
 
 .benefits_wrapper {
   display: flex;
@@ -96,19 +110,92 @@ em {
       padding-bottom: 2rem;
     }
     p {
-      text-transform: none;
-      color: $text-dark-gray;
       padding-right: 4rem;
-      font-size: .95rem;
       margin-bottom: 1rem;
-      line-height: 1.5rem;
-      font-weight: 400;
     }
     a {
       color: $text-gray;
       font-weight: 600;
       font-size: .9rem;
     }
+  }
+}
+
+.video_companionship_wrapper {
+  display: flex;
+  text-align: left;
+  padding-top: 6rem;
+  .video_container {
+    width: 60%;
+    padding: 2rem;
+    position: relative;
+    #video_thumbnail {
+      border-radius: .5rem;
+      cursor: pointer;
+    }
+    #yt_play {
+      width: 90px;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .pattern {
+      position: absolute;
+      width: 120px;
+      z-index: -2;
+    }
+    .shape_1 {
+      top: 15%;
+      left: -3%;
+      width: 150px;
+      z-index: -1;
+    }
+    .shape_2 {
+      width: 150px;
+      bottom: -7%;
+      right: 2%;
+    }
+    .shape_3 {
+      border-radius: 50%;
+      border: 9px solid $main-pink;
+      width: 65px;
+      height: 65px;
+      z-index: 2;
+      top: 0;
+      right: -8%;
+    }
+    .shape_4 {
+      top: -15%;
+      left: -5%;
+      width: 170px;
+      path {
+        fill: #e5c791;
+      }
+    }
+  }
+  .text_container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  p span {
+    font-weight: 600;
+  }
+  a {
+    margin-top: auto;
+    color: $main-dark-green;
+    font-weight: 600;
+    border-bottom: 1px solid $main-dark-green;
+  }
+  p span {
+    color: $main-text-purple;
   }
 }
 </style>
