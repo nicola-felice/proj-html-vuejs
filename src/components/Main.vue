@@ -4,7 +4,7 @@
       <div class="container">
         <div class="text_wrapper">
           <h1>Distant learning for <br>further expansion</h1>
-          <p>Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.</p>
+          <p>Learning is a life-long journey that in fact we never find <br> the terminate stop. Stop searching, enjoy the process.</p>
           <button>
             <font-awesome-icon class="icon" icon="download" />
             Download free guide
@@ -19,16 +19,24 @@
         </div>
 
         <div class="img_wrapper">
-          <img src="../assets/img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" alt="">
+          <img class="portrait" src="../assets/img/hero/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" alt="">
+          <!-- patterns -->
+          <img class="pattern shape_1" src="../assets/img/hero/maxcoach-shape-02.png" alt="">
+          <img class="pattern shape_2" src="../assets/img/hero/maxcoach-shape-07.png" alt="">
+          <div class="shape_3 pattern">
+            <img src="../assets/img/hero/maxcoach-shape-08.png" alt="">
+            <img src="../assets/img/hero/maxcoach-shape-08.png" alt="">            
+          </div>
+          <div class="pattern shape_4"></div>
         </div>
 
         <div class="brands_wrapper">
-          <div><img src="../assets/img/client-logo-01.png" alt=""></div>
-          <div><img src="../assets/img/client-logo-02.png" alt=""></div>
-          <div><img src="../assets/img/client-logo-03.png" alt=""></div>
-          <div><img src="../assets/img/client-logo-04.png" alt=""></div>
-          <div><img src="../assets/img/client-logo-05.png" alt=""></div>
-          <div><img src="../assets/img/client-logo-06.png" alt=""></div>
+          <div><img src="../assets/img/hero/client-logo-01.png" alt=""></div>
+          <div><img src="../assets/img/hero/client-logo-02.png" alt=""></div>
+          <div><img src="../assets/img/hero/client-logo-03.png" alt=""></div>
+          <div><img src="../assets/img/hero/client-logo-04.png" alt=""></div>
+          <div><img src="../assets/img/hero/client-logo-05.png" alt=""></div>
+          <div><img src="../assets/img/hero/client-logo-06.png" alt=""></div>
         </div>
       </div>
     </section>
@@ -45,12 +53,50 @@ export default {
 @import '../assets/vars.scss';
 
 #hero {
-  margin: 4rem 0;
+  margin: 3rem 0;
   .container {
     display: flex;
     flex-wrap: wrap;
     .img_wrapper {
       width: 50%;
+      padding: 1rem;
+      position: relative;
+      .portrait {
+        border-radius: 50%;
+      }
+      .pattern {
+        position: absolute;
+        z-index: -1;
+        width: 9rem;
+      }
+      .shape_1 {
+        top: 15%;
+        right: -15%;
+        z-index: 2;
+        width: 8rem;
+      }
+      .shape_2 {
+        bottom: 2rem;
+        right: 15%;
+      }
+      .shape_3 {
+        top: 50%;
+        left: -6%;
+        transform: translateY(-50%);
+        width: 10rem;
+        img:first-child {
+          margin-bottom: 1rem;
+        }
+      }
+      .shape_4 {
+        border-radius: 50%;
+        border: 7px solid $main-pink;
+        width: 50px;
+        height: 50px;
+
+        left: -8%;
+        bottom: 15%;
+      }
     }
     .text_wrapper {
       width: 50%;
