@@ -68,7 +68,7 @@ export default {
       }
       .shape_1 {
         top: 15%;
-        right: -15%;
+        right: -6%;
         z-index: 2;
         width: 8rem;
       }
@@ -93,7 +93,7 @@ export default {
         height: 60px;
 
         left: -8%;
-        bottom: 15%;
+        bottom: 12%;
         z-index: 2;
       }
     }
