@@ -62,10 +62,12 @@ export default {
       position: relative;
       .portrait {
         border-radius: 50%;
+        position: relative;
+        z-index: 1;
       }
       .pattern {
         position: absolute;
-        z-index: -1;
+        z-index: 0;
       }
       .shape_1 {
         top: 15%;
