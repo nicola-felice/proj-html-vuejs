@@ -1,0 +1,44 @@
+[
+  {
+    "price": 40,
+    "name": "Learning to Write as a Professional Author",
+    "numberOfLessons": 20,
+    "numberOfStudents": 50,
+    "fotoName": "course_1.jpg"
+  },
+  {
+    "price": "Free",
+    "name": "Customer-centric Info-Tech Strategies",
+    "numberOfLessons": 24,
+    "numberOfStudents": 769,
+    "fotoName": "course_2.jpg"
+  },
+  {
+    "price":19,
+    "name": "Open Programming Courses for Everyone: Python",
+    "numberOfLessons": 17,
+    "numberOfStudents": 62,
+    "fotoName": "course_3.jpg"
+  },
+  {
+    "price": 26,
+    "name": "Academic Listening and Note-taking",
+    "numberOfLessons": 14,
+    "numberOfStudents": 68,
+    "fotoName": "course_4.jpg"
+  },
+  {
+    "price": 39,
+    "name": "Master jQuery in a Short Period of Time",
+    "numberOfLessons": 6,
+    "numberOfStudents": 52,
+    "fotoName": "course_5.jpg"
+  },
+  {
+    "price": 59,
+    "name": "Introduction to Javascript to Beginners",
+    "numberOfLessons": 14,
+    "numberOfStudents": 76,
+    "fotoName": "course_6.jpg"
+  }
+]

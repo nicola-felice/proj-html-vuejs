@@ -14,8 +14,8 @@ import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Main from './components/Main.vue';
 // data
-import navLinksHeaderjson from './assets/header-nav-links.json';
-import navLinksFooterjson from './assets/footer-nav-links.json';
+import navLinksHeaderjson from './assets/json/header-nav-links.json';
+import navLinksFooterjson from './assets/json/footer-nav-links.json';
 
 export default {
   name: 'App',

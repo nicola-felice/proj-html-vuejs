@@ -5,59 +5,21 @@
       <h2>Featured Online Courses</h2>
       <div class="courses_wrapper">
         <ul>
-          <li class="course_card">
+          <li v-for="(elm, id) in coursesList" :key="id" class="course_card">
             <div class="img_wrapper">
-              <img src="../../assets/img/online_courses/course_1.jpg" alt="">
+              <img :src="require(`../../assets/img/online_courses/${elm.fotoName}`)" alt="">
             </div>
             <div class="text_wrapper">
-              <div class="price">$60<span>.00</span></div>
-              <h4>Learning to Write as a Professional Author</h4>
+              <div class="price">${{elm.price}}<span v-if="!isNaN(elm.price)">.00</span></div>
+              <h4>{{elm.name}}</h4>
               <div class="info">
                 <span>
                   <font-awesome-icon class="icon_right" :icon="['far', 'file-alt']" />
-                  20 lessons
+                  {{elm.numberOfLessons}} Lessons
                 </span>
                 <span>
                   <font-awesome-icon class="icon_right" :icon="['far', 'user']" />
-                  20 students
-                </span>
-              </div>
-            </div>
-          </li>
-          <li class="course_card">
-            <div class="img_wrapper">
-              <img src="../../assets/img/online_courses/course_1.jpg" alt="">
-            </div>
-            <div class="text_wrapper">
-              <div class="price">$60<span>.00</span></div>
-              <h4>Learning to Write as a Professional Author</h4>
-              <div class="info">
-                <span>
-                  <font-awesome-icon class="icon_right" :icon="['far', 'file-alt']" />
-                  20 lessons
-                </span>
-                <span>
-                  <font-awesome-icon class="icon_right" :icon="['far', 'user']" />
-                  20 students
-                </span>
-              </div>
-            </div>
-          </li>
-          <li class="course_card">
-            <div class="img_wrapper">
-              <img src="../../assets/img/online_courses/course_1.jpg" alt="">
-            </div>
-            <div class="text_wrapper">
-              <div class="price">$60<span>.00</span></div>
-              <h4>Learning to Write as a Professional Author</h4>
-              <div class="info">
-                <span>
-                  <font-awesome-icon class="icon_right icon" :icon="['far', 'file-alt']" />
-                  20 lessons
-                </span>
-                <span>
-                  <font-awesome-icon class="icon_right icon" :icon="['far', 'user']" />
-                  20 students
+                  {{elm.numberOfStudents}} Students
                 </span>
               </div>
             </div>
@@ -73,8 +35,15 @@
 </template>
 
 <script>
+import coursesjson from '../../assets/json/courses-data.json';
+
 export default {
   name: 'OnlineCoursesSection',
+  data() {
+    return {
+      coursesList: coursesjson,
+    }
+  }
 }
 </script>
 
@@ -105,18 +74,19 @@ button {
     flex-wrap: wrap;
     .course_card {
       text-align: left;
-      margin: .5rem .5rem;
+      margin: .25rem;
       width: calc(50% - 2rem);
       display: flex;
-      padding: 1rem;
+      padding: 1.25rem;
       border-radius: .5rem;
+      transition: all 200ms ease-in-out;
       &:hover {
         background-color: white;
         box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.08);
       }
       .img_wrapper {
-        width:30%;
-        padding-bottom: 30%;
+        width:35%;
+        padding-bottom: 35%;
         position: relative;
         border-radius: 50%;
         overflow: hidden;
@@ -134,11 +104,12 @@ button {
         flex-direction: column;
         justify-content: space-around;
         padding: 1rem 0;
-        margin-left: 1.5rem;
-        width: 70%;
+        margin-left: 1.25rem;
+        width: 65%;
         h4 {
           font-size: 1.15rem;
           color: $main-text-purple;
+          line-height: 2rem;
         }
         .info {
           font-size: .85rem;
