@@ -67,7 +67,6 @@ export default {
       .pattern {
         position: absolute;
         z-index: -1;
-        width: 9rem;
       }
       .shape_1 {
         top: 15%;
@@ -78,6 +77,7 @@ export default {
       .shape_2 {
         bottom: 2rem;
         right: 15%;
+        width: 9rem;
       }
       .shape_3 {
         top: 50%;
@@ -96,6 +96,7 @@ export default {
 
         left: -8%;
         bottom: 15%;
+        z-index: 2;
       }
     }
     .text_wrapper {
@@ -142,8 +143,14 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-top: 2rem;
       img {
         opacity: .5;
+        padding: 0 1.75rem;
+        transition: opacity 250ms ease-in-out;
+      }
+      img:hover {
+        opacity: 1;
       }
     }
   }
