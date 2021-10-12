@@ -34,3 +34,24 @@ img {
   display: block;
   width: 100%;
 }
+
+/* buttons */
+.btn {
+  background-color: $main-dark-green;
+  color: white;
+  border-radius: .25rem;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: 800;
+  transition: background-color 250ms ease-in-out;
+  .icon_left {
+    margin-right: .5rem;
+  }
+  .icon_right {
+    margin-left: .5rem;
+  }
+  &:hover {
+    background-color: $main-text-purple;
+  }
+}

@@ -4,8 +4,8 @@
         <div class="text_wrapper">
           <h1>Distant learning for <br>further expansion</h1>
           <p>Learning is a life-long journey that in fact we never find <br> the terminate stop. Stop searching, enjoy the process.</p>
-          <button>
-            <font-awesome-icon class="icon" icon="download" />
+          <button class="btn">
+            <font-awesome-icon class="icon_left" icon="download" />
             Download free guide
           </button>
           <div class="free_sample">
@@ -116,22 +116,6 @@ export default {
         line-height: 1.75rem;
         font-weight: 600;
         color: $text-gray;
-      }
-      button {
-        background-color: $main-dark-green;
-        color: white;
-        border-radius: .25rem;
-        border: none;
-        padding: 1rem 2rem;
-        cursor: pointer;
-        font-weight: 800;
-        transition: background-color 250ms ease-in-out;
-        .icon {
-          margin-right: .5rem;
-        }
-        &:hover {
-          background-color: $main-text-purple;
-        }
       }
       .free_sample {
         color: $text-gray;
