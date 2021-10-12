@@ -134,6 +134,8 @@ export default {
         }
       }
       .free_sample {
+        color: $text-gray;
+        font-weight: 600;
         a {
           color: $main-dark-green;
           border-bottom: 1px solid $main-dark-green;
