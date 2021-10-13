@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <p class="subtitle">Stimulated to learn?</p>
-      <h2>Featured Online Courses</h2>
+      <h2 class="section_title">Featured Online Courses</h2>
       <div class="courses_wrapper">
         <ul>
           <li v-for="(elm, id) in coursesList" :key="id" class="course_card">
@@ -56,11 +56,6 @@ section {
   padding: 5rem 0;
 }
 
-h2 {
-  margin-bottom: 3rem;
-  color: $main-text-purple;
-  font-size: 1.75rem;
-}
 button {
   margin-top: 3rem;
 }

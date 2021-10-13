@@ -39,10 +39,28 @@ img {
   width: 100%;
 }
 
+.section_title {
+  margin-bottom: 3rem;
+  color: $main-text-purple;
+  font-size: 1.75rem;
+  em {
+    color: $main-dark-green;
+    font-weight: 500;
+    font-style: normal;
+  }
+}
 .subtitle {
   margin-bottom: 1rem;
   color: $text-gray;
   text-transform: uppercase;
+  font-weight: 500;
+}
+
+p {
+  text-transform: none;
+  color: $text-dark-gray;
+  font-size: .95rem;
+  line-height: 1.5rem;
   font-weight: 500;
 }
 

@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <p class="subtitle">Maxcoach available courses</p>
-      <h2>Access <em>Smart Tutoring</em> Program For Benefits.</h2>
+      <h2 class="section_title">Access <em>Smart Tutoring</em> Program For Benefits.</h2>
       <div class="benefits_wrapper">
         <div class="benefit_card">
           <img src="../../assets/img/smart_tutoring/home-2-image-box-01.png" alt="">
@@ -48,7 +48,7 @@
         </div>
         <div class="text_container">
           <p class="subtitle">Get started <span>effortlessly</span></p>
-          <h2>Enjoy Our <em>Companionship</em></h2>
+          <h2 class="section_title">Enjoy Our <em>Companionship</em></h2>
           <p>Sneek peek into what has in store for you on our online teaching and mentoring portal. Seek for some hidden hints of early-bird rewards as well.</p>
           <a href="#">
             Download free guidebook
@@ -74,24 +74,6 @@ section {
   text-align: center;
   background-color: white;
   clip-path: ellipse(140% 100% at 16.08% 0%);
-}
-
-h2 {
-  margin-bottom: 3rem;
-  color: $main-text-purple;
-  font-size: 1.75rem;
-}
-em {
-  color: $main-dark-green;
-  font-weight: 500;
-  font-style: normal;
-}
-p {
-  text-transform: none;
-  color: $text-dark-gray;
-  font-size: .95rem;
-  line-height: 1.5rem;
-  font-weight: 400;
 }
 
 .benefits_wrapper {
@@ -198,15 +180,13 @@ p {
   }
   p span {
     font-weight: 600;
+    color: $main-text-purple;
   }
   a {
     margin-top: auto;
     color: $main-dark-green;
     font-weight: 600;
     border-bottom: 1px solid $main-dark-green;
-  }
-  p span {
-    color: $main-text-purple;
   }
 }
 </style>
