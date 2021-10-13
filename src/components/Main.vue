@@ -10,7 +10,9 @@
 
     <CTA />
 
-    <div style="height: 50vh; background-color: white;" id="spacing"></div>
+    <Numbers-achieved />
+
+    <div style="height: 50vh; background-color: gray;" id="spacing"></div>
   </main>
 </template>
 
@@ -21,6 +23,7 @@ import OnlineCoursesSection from './sections/OnlineCoursesSection.vue';
 import SmartTutoringSection from './sections/SmartTutoringSection.vue';
 import ReviewsSection from './sections/ReviewsSection.vue';
 import CTA from './sections/CTA.vue';
+import NumbersAchieved from './sections/NumbersAchieved.vue';
 // json
 import reviewsJson from '../assets/json/reviews.json';
 
@@ -33,6 +36,7 @@ export default {
     SmartTutoringSection,
     ReviewsSection,
     CTA,
+    NumbersAchieved,
   },
   data() {
     return {
