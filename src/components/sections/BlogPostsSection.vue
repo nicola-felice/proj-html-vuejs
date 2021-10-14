@@ -138,6 +138,7 @@ section {
         .title {
           line-height: 1.5rem;
           font-size: 1.2rem;
+          text-transform: capitalize;
         }
         .details {
           margin-top: 1.75rem;
