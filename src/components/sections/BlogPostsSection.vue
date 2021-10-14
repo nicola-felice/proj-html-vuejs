@@ -110,6 +110,10 @@ section {
       line-height: 1.5rem;
       a {
         display: flex;
+        transition: color 200ms ease;
+        &:hover {
+          color: $main-dark-green;
+        }
         .icon {
           margin-right: .5rem;
           margin-top: .25rem;
