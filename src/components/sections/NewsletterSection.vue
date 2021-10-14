@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="newsletter_section">
     <div class="container">
       <h2 class="section_title">Subscribe <em>Newsletters</em></h2>
       <p>Enter your email address to register to our newsletter subscription delivered on a regular basis!</p>
@@ -8,9 +8,9 @@
         <button class="btn">Subscribe</button>        
       </div>
 
-      <img class="pattern shape_1" src="../../assets/img/shapes/maxcoach-shape-02.png" alt="">
-      <img class="pattern shape_2" src="../../assets/img/shapes/maxcoach-shape-09.png" alt="">
-      <div class="pattern shape_3"></div>
+      <img class="pattern shape_1" ref="shape_1" src="../../assets/img/shapes/maxcoach-shape-02.png" alt="">
+      <img class="pattern shape_2" ref="shape_2" src="../../assets/img/shapes/maxcoach-shape-09.png" alt="">
+      <div class="pattern shape_3" ref="shape_3"></div>
     </div>
   </section>
 </template>
@@ -18,6 +18,15 @@
 <script>
 export default {
   name: 'NewsletterSection',
+  mounted() {
+    document.querySelector("#newsletter_section").addEventListener("mousemove", (ev) => { 
+      let x = ev.clientX;
+      let y = ev.clientY;
+      this.$refs.shape_1.style.transform = `translate3d(${-x / 15}px, ${-y / 15}px, 0px)`;
+      this.$refs.shape_2.style.transform = `translate3d(${x / 15}px, ${y / 15}px, 0px)`;
+      this.$refs.shape_3.style.transform = `translate3d(${-x / 15}px, ${-y / 15}px, 0px)`;
+    });
+  }
 }
 </script>
 
@@ -79,7 +88,7 @@ section {
   height: 55px;
 
   top: 50%;
-  left: 0;
+  left: 5%;
   transform: translateX(-50%);
 }
 </style>

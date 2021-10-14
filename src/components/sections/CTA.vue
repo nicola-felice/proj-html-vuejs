@@ -1,13 +1,13 @@
 <template>
-  <section>
+  <section id="cta_section">
     <div class="container">
       <h3 class="section_title">Start today for getting <em>Online Certification</em></h3>
       <h2 class="section_title">You can be your own guiding star with our help!</h2>
       <button class="btn">Get started now</button>     
 
-      <img class="pattern shape_1" src="../../assets/img/shapes/maxcoach-shape-01.png" alt="">
-      <img class="pattern shape_2" src="../../assets/img/shapes/maxcoach-shape-02.png" alt="">
-      <div class="pattern shape_3"></div>
+      <img class="pattern shape_1" ref="shape_1" src="../../assets/img/shapes/maxcoach-shape-01.png" alt="">
+      <img class="pattern shape_2" ref="shape_2" src="../../assets/img/shapes/maxcoach-shape-02.png" alt="">
+      <div class="pattern shape_3" ref="shape_3"></div>
     </div>
   </section>
 </template>
@@ -15,6 +15,15 @@
 <script>
 export default {
   name: 'CTA',
+  mounted() {
+    document.querySelector("#cta_section").addEventListener("mousemove", (ev) => { 
+      let x = ev.clientX;
+      let y = ev.clientY;
+      this.$refs.shape_1.style.transform = `translate3d(${x / 15}px, ${y / 15}px, 0px)`;
+      this.$refs.shape_2.style.transform = `translate3d(${-x / 15}px, ${-y / 15}px, 0px)`;
+      this.$refs.shape_3.style.transform = `translate3d(${-x / 15}px, ${-y / 15}px, 0px)`;
+    });
+  }
 }
 </script>
 
@@ -25,7 +34,7 @@ section .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 7rem;
+  padding: 6rem 0 7rem 0;
   position: relative;
   h3.section_title {
     font-size: 1.25rem;
@@ -58,7 +67,7 @@ section .container {
   width: 45px;
   height: 45px;
 
-  top: 8%;
-  left: 2%;
+  top: 13%;
+  left: 3%;
 }
 </style>

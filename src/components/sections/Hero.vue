@@ -20,13 +20,13 @@
         <div class="img_wrapper">
           <img class="portrait" src="../../assets/img/hero/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" alt="">
           <!-- patterns -->
-          <img class="pattern shape_1" src="../../assets/img/shapes/maxcoach-shape-02.png" alt="">
-          <img class="pattern shape_2" src="../../assets/img/shapes/maxcoach-shape-07.png" alt="">
-          <div class="shape_3 pattern">
+          <img class="pattern shape_1" ref="shape_1" src="../../assets/img/shapes/maxcoach-shape-02.png" alt="">
+          <img class="pattern shape_2" ref="shape_2" src="../../assets/img/shapes/maxcoach-shape-07.png" alt="">
+          <div class="shape_3 pattern" ref="shape_3">
             <img src="../../assets/img/shapes/maxcoach-shape-08.png" alt="">
             <img src="../../assets/img/shapes/maxcoach-shape-08.png" alt="">            
           </div>
-          <div class="pattern shape_4"></div>
+          <div class="pattern shape_4" ref="shape_4"></div>
         </div>
 
         <div class="brands_wrapper">
@@ -44,6 +44,16 @@
 <script>
 export default {
   name: 'Hero',
+  mounted() {
+    document.querySelector("#hero").addEventListener("mousemove", (ev) => { 
+      let x = ev.clientX;
+      let y = ev.clientY;
+      this.$refs.shape_4.style.transform = `translate3d(${x / 15}px, ${y / 15}px, 0px)`;
+      this.$refs.shape_1.style.transform = `translate3d(${x / 15}px, ${y / 15}px, 0px)`;
+      this.$refs.shape_2.style.transform = `translate3d(${-x / 15}px, ${-y / 15}px, 0px)`;
+      this.$refs.shape_3.style.transform = `translate3d(${-x / 15}px, ${-y / 15}px, 0px)`;
+    });
+  }
 }
 </script>
 
@@ -81,7 +91,7 @@ export default {
         width: 9rem;
       }
       .shape_3 {
-        top: 50%;
+        top: 30%;
         left: -6%;
         transform: translateY(-50%);
         width: 10rem;

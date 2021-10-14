@@ -90,7 +90,7 @@ export default {
 
 section {
   text-align: center;
-  padding: 5rem 0;
+  padding-top: 5rem;
 }
 
 #reviews_slider {
