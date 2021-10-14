@@ -34,9 +34,13 @@
       </div>
       <div class="video_companionship_wrapper">
         <div class="video_container">
-          <div class="video_thumbnail_wrapper">
+          <div @click="play" class="video_thumbnail_wrapper">
             <img id="video_thumbnail" src="../../assets/img/smart_tutoring/home-2-popup-video-poster.jpg" alt="">
             <img id="yt_play" src="../../assets/img/smart_tutoring/icon-youtube-play.png" alt="">
+            <!-- video -->
+            <div ref="yt_video" id="yt_video">
+              <vytia-player :height="'100%'" :width="'100%'" :ytid="videoID" ref="yt"></vytia-player>              
+            </div>
           </div>
           <!-- shapes -->
           <img class="pattern shape_1" src="../../assets/img/shapes/maxcoach-shape-05-150x150.png" alt="">
@@ -63,6 +67,17 @@
 <script>
 export default {
   name: 'SmartTutoringSection',
+  data() {
+    return {
+      videoID: 'ElFJ1qcl74U',
+    }
+  },
+  methods: {
+    play() {
+      this.$refs.yt.player.playVideo();
+      this.$refs.yt_video.style.zIndex = '2';
+    }
+  }
 }
 </script>
 
@@ -120,9 +135,19 @@ section {
       overflow: hidden;
       border-radius: .5rem;    
       cursor: pointer;
+      position: relative;
+      #yt_video {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
       #yt_play {
         width: 90px;
         position: absolute;
+        z-index: 1;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);

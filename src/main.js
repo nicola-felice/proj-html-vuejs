@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+// youtue plyer
+import Vytia from 'vue-youtube-iframe-api';
+Vue.use(Vytia);
 
 // fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
