@@ -14,7 +14,7 @@
 
     <Blog-posts-section />
 
-    <div style="height: 50vh; background-color: gray;" id="spacing"></div>
+    <Newsletter-section />
   </main>
 </template>
 
@@ -27,6 +27,7 @@ import ReviewsSection from './sections/ReviewsSection.vue';
 import CTA from './sections/CTA.vue';
 import NumbersAchieved from './sections/NumbersAchieved.vue';
 import BlogPostsSection from './sections/BlogPostsSection.vue';
+import NewsletterSection from './sections/NewsletterSection.vue';
 // json
 import reviewsJson from '../assets/json/reviews.json';
 
@@ -41,6 +42,7 @@ export default {
     CTA,
     NumbersAchieved,
     BlogPostsSection,
+    NewsletterSection,
   },
   data() {
     return {

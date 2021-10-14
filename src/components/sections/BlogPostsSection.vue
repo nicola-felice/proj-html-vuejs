@@ -141,7 +141,7 @@ section {
         }
         .details {
           margin-top: 1.75rem;
-          color: rgba(0, 0, 0, 0.5);
+          color: rgba(0, 0, 0, 0.39);
           font-size: .8rem;
           .icon {
             margin-right: .25rem;

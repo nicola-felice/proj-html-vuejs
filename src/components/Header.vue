@@ -135,7 +135,7 @@ nav ul {
     border: none;
     border-radius: .25rem;
     &:focus {
-      outline: 2px solid $main-dark-green;
+      outline: 1px solid $main-dark-green;
     }
   }
   .icon {
