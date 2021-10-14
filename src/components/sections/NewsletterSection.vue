@@ -26,7 +26,7 @@ export default {
 
 section {
   background-color: #fff;
-  padding: 5rem 0;
+  padding: 7rem 0;
 }
 
 .container {
