@@ -25,7 +25,7 @@ section .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
   position: relative;
   h3.section_title {
     font-size: 1.25rem;
