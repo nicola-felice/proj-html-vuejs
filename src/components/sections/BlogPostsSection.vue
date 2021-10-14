@@ -5,31 +5,31 @@
         <p class="subtitle">Enjoyable insights</p>
         <h2 class="section_title">Most Viewed <em>Best Blogs</em></h2>
         <ul class="list_best_posts">
-          <li v-for="(elm, id) in 5" :key="id">
-            <a href="#">
+          <li v-for="(elm, id) in bestBlogPosts" :key="id">
+            <a :href="elm.url">
               <font-awesome-icon class="icon" icon="long-arrow-alt-right" />
-              <div>Lorem ipsum dolor sit amet consectetur veritatis beatae labore quibusdam rem</div>
+              <div>{{elm.title}}</div>
             </a>
           </li>
         </ul>
       </div>
 
       <div id="latest_posts">
-        <div v-for="(elm, id) in 2" :key="id" class="post_card">
+        <div v-for="(elm, id) in latestBlogPosts" :key="id" class="post_card">
           <div class="img_wrapper">
-            <img src="../../assets/img/blog/artist-blog-01-480x352.jpg" alt="">
+            <img :src="require(`../../assets/img/blog/${elm.imgName}`)" alt="">
           </div>
           <div class="text">
-            <p class="subtitle">artist</p>
-            <div class="title">Ten Benefits Of Rentals That May Change Your Perspective</div>
+            <p class="subtitle">{{elm.category}}</p>
+            <div class="title">{{elm.title}}</div>
             <div class="details">
               <span>
                 <font-awesome-icon class="icon" :icon="['far', 'calendar']" />
-                Dec 28, 2020 
+                {{elm.date}} 
               </span>
               <span>
                 <font-awesome-icon class="icon" :icon="['far', 'eye']" />
-                1,448 views 
+                {{elm.views}}
               </span>
             </div>
           </div>
@@ -44,7 +44,44 @@ export default {
   name: 'BlogPostsSection',
   data() {
     return {
-
+      bestBlogPosts: [
+        {
+          title: 'Become a Better Blogger: Content Planning',
+          url: '#'
+        },
+        {
+          title: 'Promoting Your Online Business on Pinterest',
+          url: '#'
+        },
+        {
+          title: 'Gamification and Game-Based Learning',
+          url: '#'
+        },
+        {
+          title: 'Designing an Online Course from Expert’s Perspective',
+          url: '#'
+        },
+        {
+          title: 'Why Online Courses Are the Future of Education',
+          url: '#'
+        },
+      ],
+      latestBlogPosts: [
+        {
+          title: 'Brush strokes energize trees in painting',
+          category: 'artist',
+          date: 'Dec 28, 2020',
+          views: '1,320',
+          imgName: 'artist-blog-03-480x352.jpeg',
+        },
+        {
+          title: 'pocket-sized notebooks hold miniature painting',
+          category: 'artist',
+          date: 'May 28, 2020',
+          views: '936',
+          imgName: 'artist-blog-01-480x352.jpg',
+        },
+      ]
     }
   }
 }
@@ -69,7 +106,7 @@ section {
       margin-bottom: 2rem;
     }
     li {
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       line-height: 1.5rem;
       a {
         display: flex;
@@ -88,6 +125,7 @@ section {
       background-color: white;
       border-radius: .5rem;
       overflow: hidden;
+      width: 50%;
       .img_wrapper {
         height: 55%;
         img {
@@ -99,6 +137,7 @@ section {
         padding: 1.75rem;
         .title {
           line-height: 1.5rem;
+          font-size: 1.2rem;
         }
         .details {
           margin-top: 1.75rem;
