@@ -9,10 +9,18 @@
           <li><a href="#">support@maxcoach.com</a></li>
         </ul>
         <div class="socials_wrapper">
-            <font-awesome-icon class="social_icon" :icon="['fab', 'facebook-square']" />
-            <font-awesome-icon class="social_icon" :icon="['fab', 'twitter']" />
-            <font-awesome-icon class="social_icon" :icon="['fab', 'instagram']" />
-            <font-awesome-icon class="social_icon" :icon="['fab', 'linkedin']" />
+            <a href="#">
+              <font-awesome-icon class="social_icon" :icon="['fab', 'facebook-square']" />
+            </a>
+            <a href="#">
+              <font-awesome-icon class="social_icon" :icon="['fab', 'twitter']" />
+            </a>
+            <a href="#">
+              <font-awesome-icon class="social_icon" :icon="['fab', 'instagram']" />
+            </a>
+            <a href="#">
+              <font-awesome-icon class="social_icon" :icon="['fab', 'linkedin']" />
+            </a>
         </div>
       </div>
 
@@ -62,6 +70,9 @@ footer {
         margin-right: 1.75rem;
         font-size: 1.5rem;
         color: #b1b1b1;
+        &:hover {
+          color: $main-dark-green;
+        }
       }
     }
     .explore {
