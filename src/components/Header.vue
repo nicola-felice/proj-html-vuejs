@@ -48,9 +48,13 @@ export default {
 
 header { 
   box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.2);
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 99999;
   background-color: white;
+
   .container {
     display: flex;
     align-items: center;  
