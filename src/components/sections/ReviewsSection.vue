@@ -46,7 +46,9 @@
       </div>
     </div>
     <div id="slider_nav" ref="slider_nav">
-      <div @click="slideTo(id)" v-for="(elm, id) in reviews" :key="id" class="slider_dot"></div>
+      <div @click="slideTo(id)" v-for="(elm, id) in reviews" :key="id" class="slider_dot">
+        <div class="circle"></div>
+      </div>
     </div>
   </section>
 </template>
@@ -127,14 +129,17 @@ section {
   justify-content: center;
   padding-top: 2rem;
   .slider_dot {
+    cursor: pointer;
+    margin: 0 .1rem;
+  }
+  .slider_dot .circle {
     border-radius: 50%;
     width: 7px;
     height: 7px;
     background-color: rgba(0, 0, 0, 0.377);
     margin: .45rem;
-    cursor: pointer;
   }
-  .slider_dot.active {
+  .slider_dot.active .circle {
     width: 10px;
     height: 10px;
     background-color: #000000;
