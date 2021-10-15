@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "title": "High level of efficency and scientific teaching methods",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nostrum vero veritatis maxime qui quasi. Error debitis eius molestias asperiores iusto dignissimos in distinctio sit consequatur, facere, mollitia officia esse.",
     "imgName": "testimonial-avata-02.jpg",
@@ -7,6 +8,7 @@
     "profession": "Freelancer"
   },
   {
+    "id": 1,
     "title": "Professional team of specialists and passionate mentors at reach",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nostrum vero veritatis maxime qui quasi. Error debitis eius molestias asperiores iusto dignissimos in distinctio sit consequatur, facere, mollitia officia esse.",
     "imgName": "testimonial-avata-01.jpg",
@@ -14,6 +16,7 @@
     "profession": "IT Specialist"
   },
   {
+    "id": 2,
     "title": "The MaxCoach team works really hard to ensure high quality",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nostrum vero veritatis maxime qui quasi. Error debitis eius molestias asperiores iusto dignissimos in distinctio sit consequatur, facere, mollitia officia esse.",
     "imgName": "testimonial-avata-03.jpg",
@@ -21,6 +24,7 @@
     "profession": "Private Tutor"
   },
   {
+    "id": 3,
     "title": "It's a choice of quality for people with special needs",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nostrum vero veritatis maxime qui quasi. Error debitis eius molestias asperiores iusto dignissimos in distinctio sit consequatur, facere, mollitia officia esse.",
     "imgName": "testimonial-avata-04.jpg",

@@ -4,10 +4,11 @@
     <h2 class="section_title">Our <em>top learners'</em> verbatim</h2>
     <div id="reviews_slider">
       <div class="slider">
-        <div class="slider_prev"></div>
+        <div @click="prevReview" class="slider_prev"></div>
 
-        <div class="slider_stream">
-          <div v-for="(elm, id) in reviews" :key="id" class="slider_item">
+        <div class="slider_stream" ref="stream">
+
+          <div v-for="(elm, id) in reviews" :key="id" :class="`reviewNum${id}`" class="slider_item">
             <div class="review_card">
               <h4>{{elm.title}}</h4>
               <p>{{elm.text}}</p>
@@ -24,7 +25,7 @@
           </div>
 
           <!-- only if you have 4 or less reviews -->
-          <div v-for="(elm, id) in reviewsCopy" :key="id + reviews.length" class="slider_item">
+          <div v-for="(elm, id) in reviewsCopy" :key="id + reviews.length" :class="`reviewNum${id}`" class="slider_item">
             <div class="review_card">
               <h4>{{elm.title}}</h4>
               <p>{{elm.text}}</p>
@@ -41,14 +42,11 @@
           </div>
         </div>
 
-        <div class="slider_next"></div>
+        <div @click="nextReview" class="slider_next"></div>
       </div>
     </div>
-    <div id="slider_nav">
-      <div class="slider_dot active"></div>
-      <div class="slider_dot"></div>
-      <div class="slider_dot"></div>
-      <div class="slider_dot"></div>
+    <div id="slider_nav" ref="slider_nav">
+      <div @click="slideTo(id)" v-for="(elm, id) in reviews" :key="id" class="slider_dot"></div>
     </div>
   </section>
 </template>
@@ -64,23 +62,48 @@ export default {
       } else {
         return [];
       }
-    }
+    },
   },
-  mounted() {
+  methods: {
+    slideTo(id) {
+      // execute next n times to reach the wanted review
+      while ( !this.$refs.stream.childNodes[4].classList.contains(`reviewNum${id}`) ) {
+        this.nextReview();
+      }
+    },
+    nextReview() {
+    let stream = document.querySelector('.slider_stream');
+    let items = document.querySelectorAll('.slider_item');
+
+    stream.appendChild(items[0]);
+    items = document.querySelectorAll('.slider_item');
+
+    this.setActiveDot();
+    },  
+    prevReview() {
     let stream = document.querySelector('.slider_stream');
     let items = document.querySelectorAll('.slider_item');
     
-    let prev = document.querySelector('.slider_prev');
-    prev.addEventListener('click', function() {
-      stream.insertBefore(items[items.length - 1], items[0]);
-      items = document.querySelectorAll('.slider_item');
-    });
-    
-    let next = document.querySelector('.slider_next');
-    next.addEventListener('click', function() {
-      stream.appendChild(items[0]);
-      items = document.querySelectorAll('.slider_item');
-    });
+    stream.insertBefore(items[items.length - 1], items[0]);
+    items = document.querySelectorAll('.slider_item');
+
+    this.setActiveDot();
+    },
+    setActiveDot() {
+      this.$refs.slider_nav.childNodes.forEach( (elm, id) => {
+
+        elm.classList.remove('active');
+
+        if ( this.$refs.stream.childNodes[4].classList.contains(`reviewNum${id}`) ) {
+          elm.classList.add('active');
+        }         
+      });
+
+
+    },
+  },
+  mounted() {
+    this.setActiveDot();
   }
 }
 </script>
@@ -112,8 +135,8 @@ section {
     cursor: pointer;
   }
   .slider_dot.active {
-    width: 11px;
-    height: 11px;
+    width: 10px;
+    height: 10px;
     background-color: #000000;
   }
 }
